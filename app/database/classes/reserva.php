@@ -52,6 +52,38 @@ class Reserva{
     return $this->pagamento;
   }
 
+  public function setPassageiro($passageiro) {
+    $this->passageiro = $passageiro;
+}
+
+public function setVooAssociado($voo_associado) {
+    $this->voo_associado = $voo_associado;
+}
+
+public function setOrigem($origem) {
+    $this->origem = $origem;
+}
+
+public function setDestino($destino) {
+    $this->destino = $destino;
+}
+
+public function setNumVoo($num_voo) {
+    $this->num_voo = $num_voo;
+}
+
+public function setAssentoReserva($assento_reserva) {
+    $this->assento_reserva = $assento_reserva;
+}
+
+public function setNumReserva($num_reserva) {
+    $this->num_reserva = $num_reserva;
+}
+
+public function setPagamento($pagamento) {
+    $this->pagamento = $pagamento;
+}
+
 }
 
 //info reserva
@@ -62,15 +94,3 @@ $reservas[] = $reserva1;
 
 $reserva2 = new Reserva("136", $voo2, $voo2, $voo2, $voo2, "10", $passageiro2, $pagamento2);
 $reservas[] = $reserva2;
-
-foreach ($reservas as $reservas) {
-  echo "Passagem do cliente \n";
-  echo "Nome do passageiro: " . $reservas->getPassageiro()->getNome() . "\n";
-  echo "Número da reserva: " . $reservas->getNumReserva() . "\n";
-  echo "Número do voo: " . $reservas->getNumVoo()->num_voo . "\n";
-  echo "Origem: " . $reservas->getOrigem()->origem . "\n";
-  echo "Destino: " . $reservas->getDestino()->destino . "\n";
-  echo "Companhia Aérea: " . $reservas->getVooAssociado()->comp_aerea_assoc . "\n";
-  echo "Assento reservado: " . $reservas->getAssentoReserva() . "\n";
-  echo "Forma de pagamento: " . $reservas->getPagamento()->realizarPagamento() . "\n\n";
-}
