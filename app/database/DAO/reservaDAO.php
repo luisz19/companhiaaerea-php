@@ -6,7 +6,8 @@
 //     id_passageiro INTEGER,
 //     FOREIGN KEY (id_passageiro) REFERENCES passageiro(id),
 //     id_voo INTEGER,
-//     FOREIGN KEY (id_voo) REFERENCES voos(id)
+//     FOREIGN KEY (id_voo) REFERENCES voos(id) tirar chave estrangeira
+//     tirar pagamento
 // );
 
 include_once ('../classes/reserva.php');
