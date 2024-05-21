@@ -1,6 +1,7 @@
 <?php
 
 class Reserva{
+  protected $id;
   protected $num_reserva;
   protected $num_voo;
   protected $origem;
@@ -9,20 +10,25 @@ class Reserva{
   protected $assento_reserva;
   protected $passageiro;
   protected $pagamento;
+  protected $id_voo;
 
-  public function __construct($num_reserva, Voo $num_voo, Voo $origem, Voo $destino, Voo $voo_associado, $assento_reserva, Passageiro $passageiro, Pagamento $pagamento) {
-      $this->num_reserva = $num_reserva;
-      $this->num_voo = $num_voo;
-      $this->origem = $origem;
-      $this->destino = $destino;
-      $this->voo_associado = $voo_associado;
+  public function __construct($assento_reserva, $passageiro, $id_voo) {
+      
       $this->assento_reserva = $assento_reserva;
       $this->passageiro = $passageiro;
-      $this->pagamento = $pagamento;
+      $this->id_voo = $id_voo;
   }
 
   public function getPassageiro() {
       return $this->passageiro;
+  }
+
+  public function getIdVoo() {
+    return $this->id_voo;
+  }
+
+  public function getId() {
+    return $this->id;
   }
 
   public function getVooAssociado() {
@@ -56,6 +62,14 @@ class Reserva{
     $this->passageiro = $passageiro;
 }
 
+public function setIdVoo($id_voo) {
+    $this->id_voo = $id_voo;
+  }
+
+  public function setId($id) {
+    $this->id = $id;
+  }
+
 public function setVooAssociado($voo_associado) {
     $this->voo_associado = $voo_associado;
 }
@@ -87,10 +101,10 @@ public function setPagamento($pagamento) {
 }
 
 //info reserva
-$reservas = array(); //array para armazenar as reservas
+// $reservas = array(); //array para armazenar as reservas
 
-$reserva1 = new Reserva("134", $voo1, $voo1, $voo1, $voo1, "5", $passageiro1, $pagamento1);
-$reservas[] = $reserva1;
+// $reserva1 = new Reserva("134", $voo1, $voo1, $voo1, $voo1, "5", $passageiro1, $pagamento1);
+// $reservas[] = $reserva1;
 
-$reserva2 = new Reserva("136", $voo2, $voo2, $voo2, $voo2, "10", $passageiro2, $pagamento2);
-$reservas[] = $reserva2;
+// $reserva2 = new Reserva("136", $voo2, $voo2, $voo2, $voo2, "10", $passageiro2, $pagamento2);
+// $reservas[] = $reserva2;
