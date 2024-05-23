@@ -3,22 +3,6 @@
 require_once('../conexao.php');
 require_once(__DIR__ . '/../classes/voo.php');
 
-
-
-// CREATE TABLE voos (
-// 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-//     num_voo INTEGER NOT NULL,
-//     origem VARCHAR(20),
-//     destino VARCHAR(20),
-//     data_partida DATE,
-//     data_chegada DATE,
-//     hora_saida TIME,
-//     hora_chegada TIME,
-//     vagas INTEGER,
-//     preco FLOAT(10,2),
-//     comp_aerea VARCHAR(20)
-// );
-
 class VooDAO {
 
    public function create(Voo $voos) {
@@ -77,6 +61,23 @@ class VooDAO {
 
 
 }
+
+$voo = new Voo('123', 'PA', 'BA', '2022-01-01', '2022-01-02', '08:00:00', '10:00:00', 100, 'Azul', 200.00);
+$vooDAO = new VooDAO();
+$vooDAO ->create($voo);  
+//Inserindo na tabela 
+
+$voo2 = new Voo('132', 'PE', 'CE', '2023-01-02', '2023-01-04', '09:00:00', '11:00:00', 65, 'Verde', 1200.00);
+$voo_2_DAO = new VooDAO();
+$voo_2_DAO ->create($voo2); 
+
+$voo3 = new Voo('150', 'SE', 'PA', '2024-01-02', '2025-01-04', '09:00:00', '11:00:00', 90, 'Amarelo', 12200.00);
+$voo_3_DAO = new VooDAO();
+$voo_3_DAO ->create($voo3);
+
+$voo4 = new Voo('421', 'RJ', 'CE', '2022-01-02', '2022-01-04', '09:00:00', '19:00:00', 65, 'Rosa', 9200.00);
+$voo_4_DAO = new VooDAO();
+$voo_4_DAO ->create($voo4);
 
 // $voo1 = new Voo('123', 'PA', 'BA', '2022-01-01', '2022-01-02', '08:00:00', '10:00:00', 100, 'Red', 200.00);
 // $voo1_DAO = new VooDAO();

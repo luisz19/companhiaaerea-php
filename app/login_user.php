@@ -14,7 +14,7 @@
         if ($clienteDAO->autenticar($email, $num_passaporte)){
         //Verifica-se se tem um email e senha para poder permitir o acesso.
             $_SESSION['autenticado'] = true;
-            header('location: principal-loja.php'); //mudar aqui !!
+            header('location: homeVoos.php'); //mudar aqui !!
             exit(); 
         } else {
             header('location: login.php');

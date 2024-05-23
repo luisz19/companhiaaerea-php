@@ -9,7 +9,7 @@ class Passageiro{
   protected $tel;
   protected $num_passaporte;
 
-  public function __construct($nome, $email, $tel, $num_passaporte, $cpf) {
+public function __construct($nome, $email, $tel, $num_passaporte, $cpf) {
     $this->nome = $nome;
     $this->email = $email;
     $this->tel = $tel;

@@ -19,7 +19,7 @@
             $_SESSION['autenticado'] = true;
     
             // Redirecionar para a página principal-loja.php
-            header('location: principal-loja.php'); //mudar depois
+            header('location: homeVoos.php'); //mudar depois
             exit();
         } else {
             header('location: registro.php');
