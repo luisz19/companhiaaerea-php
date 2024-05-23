@@ -56,6 +56,22 @@
 
 <!-- <form action="login_user.php" method="post">
     <div class="login">
+<<<<<<< HEAD
+=======
+            <h1>Entrar na sua conta</h1>
+
+            <input type="email" placeholder="Email" name="email">
+            <input type="number" placeholder="Número do passaporte" name="num_passaporte">
+
+            <input class="entrar-button" type="submit" value="enviar" name="submit">
+
+        </div>
+            
+        <div class="adm">
+            <a href="registro.php">Não tem uma conta? cadastre-se.</a>
+        </div>
+
+>>>>>>> 88808de8775fa72b8cd77f7ca82da0064f31d24e
         
 
         <input type="email" placeholder="Email" name="email">

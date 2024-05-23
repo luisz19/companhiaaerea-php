@@ -1,6 +1,6 @@
 <?php 
 
-require_once('../conexao.php');
+require_once(__DIR__ . '/../conexao.php');
 require_once(__DIR__ . '/../classes/passageiro.php');
 
 // CREATE TABLE passageiro (
@@ -61,6 +61,15 @@ class PassageiroDAO {
         $stmt->bindValue(1, $passageiro->getId());
 
         $stmt->execute();
+    }
+
+    public function autenticar($email, $num_passaporte) {
+        $sql = 'SELECT * FROM passageiro WHERE email = ? AND num_passaporte = ?';
+        $stmt = Conexao::getConn()->prepare($sql);
+        $stmt->bindValue(1, $email);
+        $stmt->bindValue(2, $num_passaporte);
+        $stmt->execute();
+        return $stmt->rowCount() > 0;
     }
 
 }

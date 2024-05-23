@@ -8,6 +8,7 @@
     <title>Entrar na Conta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+<<<<<<< HEAD
 </head>
 
 <body class="bg-dark">
@@ -55,6 +56,16 @@
             <br>
             <a href="login.php">Já tem uma conta faça login!</a>
         </form>
+=======
+        <input type="text" placeholder="Nome" name="nome">
+        <input type="email" placeholder="Email" name="email">
+        <input type="number" placeholder="CPF" name="cpf">
+        <input type="text" placeholder="Telefone" name="tel">
+        <input type="number" placeholder="Número do passaporte" name="num_passaporte">
+        <a href="login.php">Já tem uma conta faça login!</a>
+        <br>
+        <button class="login" type="submit">Criar</button>
+>>>>>>> 88808de8775fa72b8cd77f7ca82da0064f31d24e
     </div>
 </body>
 

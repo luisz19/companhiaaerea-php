@@ -11,7 +11,7 @@
 // );
 
 include_once ('../classes/reserva.php');
-include_once ('../conexao.php');
+require_once(__DIR__ . '/../conexao.php');
 
 class reservaDAO {
 
