@@ -9,7 +9,7 @@
         $tel = $_POST['tel'];
         $num_passaporte = $_POST['num_passaporte'];
     
-        if (!empty($nome) && !empty($email) && !empty($cpf) && !empty($tel) && !empty($num_passaporte)) {
+        if (!empty($nome) &&!empty($cpf) && !empty($email) &&  !empty($tel) && !empty($num_passaporte)) {
             $passageiro = new Passageiro($nome, $cpf,  $email, $tel, $num_passaporte);
             $passageiroDAO = new PassageiroDAO();
             $passageiroDAO->create($passageiro);
@@ -19,7 +19,7 @@
             $_SESSION['autenticado'] = true;
     
             // Redirecionar para a página principal-loja.php
-            header('location: homeVoos.php'); //mudar depois
+            header('location: homeVoos.php');
             exit();
         } else {
             header('location: registro.php');

@@ -20,7 +20,7 @@
         </div>
             
         <div class="adm">
-            <a href="cadastro.php">Não tem uma conta? cadastre-se.</a>
+            <a href="registro.php">Não tem uma conta? cadastre-se.</a>
         </div>
 
         
