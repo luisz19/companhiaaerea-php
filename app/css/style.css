@@ -1,0 +1,12 @@
+#voos {
+    display: flex;
+
+}
+
+.voo-section-container{
+    width: 400px;
+}
+
+.voo-section {
+    width: 200px;
+}

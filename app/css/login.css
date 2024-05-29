@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+form {
+    background-color: #1b3984 ;
+    border-radius: 20px;
+    width: 250px;
+    padding: 100px;
+    
+}
+
+.login{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    
+}
+
+.login h1{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    width: 500px;
+
+}
+
+
+.login input{
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    padding: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #999;
+}
+
+input.entrar-button {
+    color: #fff;
+    background-color: #5f78cd;
+    padding: 5x 146px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;}
+
+.entrar-button :hover{
+    color:#5f78cd;
+}
+
+.adm{
+    align-self: flex-start;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #5f78cd;
+    cursor: pointer;
+    
+}
+
+.adm :hover{
+color: #5f78cd;
+}
+
+.imagem {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.google img{
+    width: 52px;
+    height: auto;
+    display: flex;
+}
+
+.face img{
+
+    width: 52px;
+    height: auto;
+    
+}
+
+.google :hover{
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.face :hover{
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+a{
+    color: white;
+    font-size: 0.9rem;
+}
+
+.login button{
+    color: #fff;
+    background-color: #5f78cd;
+    padding: 10px 145px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    
+}

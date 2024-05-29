@@ -23,17 +23,18 @@ class VooDAO {
 
    
 
-   public function read() {
-       $sql = 'SELECT * FROM voos';
-       $stmt = Conexao::getConn()->prepare($sql);
-       $stmt->execute();
-       if ($stmt->rowCount() > 0) {
-           $resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-           return $resultado;
-       } else {
-           return [];
-       }
-   }
+  public function read($limit = 4) {
+    $sql = 'SELECT * FROM voos LIMIT :limit';
+    $stmt = Conexao::getConn()->prepare($sql);
+    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+    $stmt->execute();
+    if ($stmt->rowCount() > 0) {
+        $resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $resultado;
+    } else {
+        return [];
+    }
+}
 
    public function update(Voo $voos) { 
        $sql = 'UPDATE voos  SET num_voo = ?, origem = ?, destino = ?, data_partida = ?, data_chegada = ?, hora_saida = ?, hora_chegada = ?, vagas = ?, preco = ?, comp_aerea = ?, WHERE id = ?';

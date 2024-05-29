@@ -10,7 +10,7 @@
 //     tirar pagamento
 // );
 
-include_once ('../classes/reserva.php');
+// include_once ('../classes/reserva.php');
 require_once(__DIR__ . '/../conexao.php');
 
 class reservaDAO {
